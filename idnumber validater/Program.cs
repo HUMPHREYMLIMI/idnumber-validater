@@ -6,13 +6,13 @@ namespace idnumber_validater
     {
         static void Main(string[] args)
         {
-            String idNumber;
+            string idNumber;
             int numericValue;
             bool correct = true;
 
             Console.WriteLine("please enter the id number ");
             idNumber = Console.ReadLine();
-            if (idNumber.Length != 13 || int.TryParse(idNumber, out numericValue) == false)
+            if (idNumber.Length != 13 || !int.TryParse(idNumber, out numericValue) == false)
             {
                 Console.WriteLine("ID number does not appear to be authentic - input not a valid number ");
                 correct = false;
